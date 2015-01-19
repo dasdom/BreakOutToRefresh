@@ -1,5 +1,5 @@
 //
-//  PullToRefreshView.swift
+//  BreakOutToRefreshView.swift
 //  PullToRefreshDemo
 //
 //  Created by dasdom on 17.01.15.
@@ -9,17 +9,17 @@
 import UIKit
 import SpriteKit
 
-protocol RefreshViewDelegate: class {
-  func refreshViewDidRefresh(refreshView: PullToRefreshView)
+protocol BreakOutToRefreshDelegate: class {
+  func refreshViewDidRefresh(refreshView: BreakOutToRefreshView)
 }
 
-class PullToRefreshView: SKView {
+class BreakOutToRefreshView: SKView {
 
   private let sceneHeight = CGFloat(100)
   
   let breakOutScene: BreakOutScene
   private unowned let scrollView: UIScrollView
-  weak var delegate: RefreshViewDelegate?
+  weak var delegate: BreakOutToRefreshDelegate?
   
   var isRefreshing = false
   var isDragging = false
@@ -66,7 +66,7 @@ class PullToRefreshView: SKView {
   }
   
   func endRefreshing() {
-    if !isDragging {
+    if !isDragging && isRefreshing {
       UIView.animateWithDuration(0.4, delay: 0, options: .CurveEaseInOut, animations: { () -> Void in
         self.scrollView.contentInset.top -= self.sceneHeight
         }) { (_) -> Void in
@@ -80,7 +80,7 @@ class PullToRefreshView: SKView {
   
 }
 
-extension PullToRefreshView: UIScrollViewDelegate {
+extension BreakOutToRefreshView: UIScrollViewDelegate {
   
   func scrollViewWillBeginDragging(scrollView: UIScrollView) {
     isDragging = true
@@ -102,7 +102,7 @@ extension PullToRefreshView: UIScrollViewDelegate {
   }
   
   func scrollViewDidScroll(scrollView: UIScrollView) {
-    println("\(scrollView.contentOffset)")
+//    println("\(scrollView.contentOffset)")
 
     let frameHeight = frame.size.height
     let yPosition = sceneHeight - (-scrollView.contentInset.top-scrollView.contentOffset.y)*2
@@ -259,8 +259,8 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
       let minimalXVelocity = CGFloat(20.0)
       let minimalYVelocity = CGFloat(20.0)
       var velocity = ballBody!.velocity as CGVector
-      println("ball category: \(ballBody?.categoryBitMask)")
-      println("before \(velocity.dx) \(velocity.dy)")
+//      println("ball category: \(ballBody?.categoryBitMask)")
+//      println("before \(velocity.dx) \(velocity.dy)")
       if velocity.dx > -minimalXVelocity && velocity.dx <= 0 {
         velocity.dx = -minimalXVelocity-1
       } else if velocity.dx > 0 && velocity.dx < minimalXVelocity {
@@ -271,7 +271,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
       } else if velocity.dy > 0 && velocity.dy < minimalYVelocity {
         velocity.dy = minimalYVelocity+1
       }
-      println("after \(velocity.dx) \(velocity.dy)")
+//      println("after \(velocity.dx) \(velocity.dy)")
       ballBody?.velocity = velocity
     }
     

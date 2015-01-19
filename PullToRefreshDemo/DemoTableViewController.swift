@@ -10,13 +10,13 @@ import UIKit
 
 class DemoTableViewController: UITableViewController {
   
-  var refreshView: PullToRefreshView!
+  var refreshView: BreakOutToRefreshView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     let refreshHeight = CGFloat(100)
-    refreshView = PullToRefreshView(scrollView: tableView)
+    refreshView = BreakOutToRefreshView(scrollView: tableView)
     refreshView.delegate = self
     
     tableView.addSubview(refreshView)
@@ -64,9 +64,9 @@ extension DemoTableViewController: UIScrollViewDelegate {
   }
 }
 
-extension DemoTableViewController: RefreshViewDelegate {
+extension DemoTableViewController: BreakOutToRefreshDelegate {
   
-  func refreshViewDidRefresh(refreshView: PullToRefreshView) {
+  func refreshViewDidRefresh(refreshView: BreakOutToRefreshView) {
     
   }
 

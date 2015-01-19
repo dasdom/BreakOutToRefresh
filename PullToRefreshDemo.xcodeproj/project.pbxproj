@@ -13,7 +13,7 @@
 		F2DA3FC01A6B009300F5576F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2DA3FBE1A6B009300F5576F /* LaunchScreen.xib */; };
 		F2DA3FCC1A6B009300F5576F /* PullToRefreshDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA3FCB1A6B009300F5576F /* PullToRefreshDemoTests.swift */; };
 		F2DA3FD61A6B01A100F5576F /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA3FD51A6B01A100F5576F /* DemoTableViewController.swift */; };
-		F2F9D7A11A6B05BF0041B9C5 /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9D7A01A6B05BF0041B9C5 /* PullToRefreshView.swift */; };
+		F2F9D7A11A6B05BF0041B9C5 /* BreakOutToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9D7A01A6B05BF0041B9C5 /* BreakOutToRefreshView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 		F2DA3FCA1A6B009300F5576F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2DA3FCB1A6B009300F5576F /* PullToRefreshDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefreshDemoTests.swift; sourceTree = "<group>"; };
 		F2DA3FD51A6B01A100F5576F /* DemoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
-		F2F9D7A01A6B05BF0041B9C5 /* PullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
+		F2F9D7A01A6B05BF0041B9C5 /* BreakOutToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakOutToRefreshView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 			children = (
 				F2DA3FB51A6B009300F5576F /* AppDelegate.swift */,
 				F2DA3FD51A6B01A100F5576F /* DemoTableViewController.swift */,
-				F2F9D7A01A6B05BF0041B9C5 /* PullToRefreshView.swift */,
+				F2F9D7A01A6B05BF0041B9C5 /* BreakOutToRefreshView.swift */,
 				F2DA3FB91A6B009300F5576F /* Main.storyboard */,
 				F2DA3FBC1A6B009300F5576F /* Images.xcassets */,
 				F2DA3FBE1A6B009300F5576F /* LaunchScreen.xib */,
@@ -215,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2F9D7A11A6B05BF0041B9C5 /* PullToRefreshView.swift in Sources */,
+				F2F9D7A11A6B05BF0041B9C5 /* BreakOutToRefreshView.swift in Sources */,
 				F2DA3FD61A6B01A100F5576F /* DemoTableViewController.swift in Sources */,
 				F2DA3FB61A6B009300F5576F /* AppDelegate.swift in Sources */,
 			);
