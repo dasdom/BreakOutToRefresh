@@ -20,9 +20,11 @@ class BreakOutToRefreshView: SKView {
   let breakOutScene: BreakOutScene
   private unowned let scrollView: UIScrollView
   weak var delegate: BreakOutToRefreshDelegate?
+  var forceEnd = false
   
   var isRefreshing = false
   var isDragging = false
+  var isVisible = false
   
   override init(frame: CGRect) {
     assert(false, "Use init(scrollView:) instead.")
@@ -62,16 +64,18 @@ class BreakOutToRefreshView: SKView {
       if self.scrollView.contentOffset.y < -60 && !self.breakOutScene.isStarted {
         self.breakOutScene.start()
       }
+      self.isVisible = true
     }
   }
   
   func endRefreshing() {
-    if !isDragging && isRefreshing {
+    if (!isDragging || forceEnd) && isVisible {
       UIView.animateWithDuration(0.4, delay: 0, options: .CurveEaseInOut, animations: { () -> Void in
         self.scrollView.contentInset.top -= self.sceneHeight
         }) { (_) -> Void in
           self.isRefreshing = false
           self.presentScene(StartScene(size: self.frame.size))
+          self.isVisible = false
       }
     } else {
       self.isRefreshing = false
@@ -90,6 +94,7 @@ extension BreakOutToRefreshView: UIScrollViewDelegate {
     isDragging = false
     
     if !isRefreshing && scrollView.contentOffset.y + scrollView.contentInset.top < -sceneHeight {
+//    if scrollView.contentOffset.y + scrollView.contentInset.top < -sceneHeight {
       beginRefreshing()
       targetContentOffset.memory.y = -scrollView.contentInset.top
       delegate?.refreshViewDidRefresh(self)
@@ -162,6 +167,8 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
     physicsBody?.restitution = 1.0
     physicsBody?.friction = 0.0
     
+    createLoadingLabelNode()
+    
     let paddle = createPaddle()
     paddle.position = CGPoint(x: frame.size.width-30.0, y: CGRectGetMidY(frame))
     addChild(paddle)
@@ -186,7 +193,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func createBlocks() {
-    for i in 0..<4 {
+    for i in 0..<6 {
       for j in 0..<5 {
         let block = SKSpriteNode(color: SKColor.greenColor(), size: CGSize(width: 5, height: 19))
         block.position = CGPoint(x: 20+CGFloat(i)*6, y: CGFloat(j)*20 + 10)
@@ -221,6 +228,16 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
     ball.physicsBody?.friction = 0.0
     
     addChild(ball)
+  }
+  
+  func createLoadingLabelNode() {
+    let loadingLabelNode = SKLabelNode(text: "Loading...")
+    loadingLabelNode.fontColor = UIColor.lightGrayColor()
+    loadingLabelNode.fontSize = 17
+    loadingLabelNode.position = CGPoint(x: CGRectGetMidX(frame), y: CGRectGetMidY(frame))
+    loadingLabelNode.name = "loadingLabel"
+    
+    addChild(loadingLabelNode)
   }
   
   func start() {
