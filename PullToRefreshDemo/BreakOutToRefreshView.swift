@@ -181,7 +181,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func createPaddle() -> SKSpriteNode {
-    let paddle = SKSpriteNode(color: UIColor.yellowColor(), size: CGSize(width: 5, height: 30))
+    let paddle = SKSpriteNode(color: UIColor.lightGrayColor(), size: CGSize(width: 5, height: 30))
     
     paddle.physicsBody = SKPhysicsBody(rectangleOfSize: paddle.size)
     paddle.physicsBody?.categoryBitMask = paddleCategory
@@ -195,9 +195,16 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func createBlocks() {
-    for i in 0..<6 {
+    for i in 0..<3 {
+      var color = SKColor.greenColor()
+      if i == 1 {
+        color = SKColor.redColor()
+      } else if i == 2 {
+        color = SKColor.yellowColor()
+      }
+      
       for j in 0..<5 {
-        let block = SKSpriteNode(color: SKColor.greenColor(), size: CGSize(width: 5, height: 19))
+        let block = SKSpriteNode(color: color, size: CGSize(width: 5, height: 19))
         block.position = CGPoint(x: 20+CGFloat(i)*6, y: CGFloat(j)*20 + 10)
         block.name = blockName
         block.physicsBody = SKPhysicsBody(rectangleOfSize: block.size)
@@ -215,7 +222,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func createBall() {
-    let ball = SKSpriteNode(color: SKColor.redColor(), size: CGSize(width: 8, height: 8))
+    let ball = SKSpriteNode(color: SKColor.whiteColor(), size: CGSize(width: 8, height: 8))
     ball.position = CGPoint(x: frame.size.width - 30.0 - ball.size.width, y: CGRectGetMidY(frame))
     ball.name = ballName
     
