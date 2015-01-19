@@ -77,7 +77,7 @@ Dominik Hauser
 
 ## Thanks
 
-Thank you to raywenderlich.com for inspiration.
+Thank you to [raywenderlich.com](http://www.raywenderlich.com) for inspiration.
 
 ## Licence
 
