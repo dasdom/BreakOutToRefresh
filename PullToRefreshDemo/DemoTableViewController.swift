@@ -32,14 +32,14 @@ class DemoTableViewController: UITableViewController {
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     // #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 10
+    return 20
   }
   
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("DemoCell", forIndexPath: indexPath) as UITableViewCell
     
-    cell.textLabel?.text = "\(indexPath.row)"
+    cell.textLabel?.text = "Row \(indexPath.row)"
     
     return cell
   }
