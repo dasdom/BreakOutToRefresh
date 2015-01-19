@@ -65,8 +65,11 @@ This is an alpha version. I hacked it together within a few hours.
 # Author
 
 Dominik Hauser
+
 [App.net: @dasdom](https://alpha.app.net/dasdom)
+
 [Twitter: @dasdom](https://twitter.com/dasdom)
+
 [swiftandpainless.com](http://swiftandpainless.com)
 
 # Licence
