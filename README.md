@@ -1,15 +1,15 @@
 # BreakOutToRefresh
-Play BreakOut while loading - A playable refresh view using SpriteKit
+Play BreakOut while loading - A playable pull to refresh view using SpriteKit
 
 ![](https://raw.githubusercontent.com/dasdom/BreakOutToRefresh/master/PullToRefreshDemo/what.gif)
 
 BreakOutToRefresh uses SpriteKit to add a playable mini game to the pull to refresh view in a table view. In this case the mini game is BreakOut but a lot of other mini games could be presented in this space.
 
-# Installation
+## Installation
 
 Add **BreakOutToRefreshView.swift** to you project.
 
-# Usage
+## Usage
 
 Add this to your table view controller:
 ```
@@ -54,18 +54,18 @@ When the loading of new content is finished, call `endRefreshing()` of the `refr
 
 When `endRefreshing()` is called the mini game doesn't stop immediately. The game stops (and the view is dismissed) when the user lifts the finger. If you like to end the mini game immediately set the `forceEnd` property to true.
 
-# Status
+## Status
 
 This is an alpha version. I hacked it together within a few hours.
 
-# To do
+## To do
 
 - Add scoring
 - Add ending of the game when the ball hits the right wall
 - Add different colors
 - Add levels
 
-# Author
+## Author
 
 Dominik Hauser
 
@@ -75,6 +75,10 @@ Dominik Hauser
 
 [swiftandpainless.com](http://swiftandpainless.com)
 
-# Licence
+## Thanks
+
+Thank you to raywenderlich.com for inspiration.
+
+## Licence
 
 MIT
