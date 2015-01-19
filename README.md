@@ -50,13 +50,16 @@ extension DemoTableViewController: BreakOutToRefreshDelegate {
 }
 ```
 
+When the loading of new content is finished, call `endRefreshing()` of the `refreshView`.
+
+When `endRefreshing()` is called the mini game doesn't stop immediately. The game stops (and the view is dismissed) when the user lifts the finger. If you like to end the mini game immediately set the `forceEnd` property to true.
+
 # Status
 
 This is an alpha version. I hacked it together within a few hours.
 
 # To do
 
-- Add a property to let the developer decide whether the game should end when `endRefreshing()` is called or when the user lifts the finger.
 - Add scoring
 - Add ending of the game when the ball hits the right wall
 - Add different colors
