@@ -78,7 +78,8 @@ class BreakOutToRefreshView: SKView {
           self.isVisible = false
       }
     } else {
-      self.isRefreshing = false
+      breakOutScene.updateLabel("Loading Finished")
+      isRefreshing = false
     }
   }
   
@@ -125,6 +126,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   let ballName = "ball"
   let paddleName = "paddle"
   let blockName = "block"
+  let backgroundLabelName = "backgroundLabel"
   
   let ballCategory   : UInt32 = 0x1 << 0
   let bottomCategory : UInt32 = 0x1 << 1
@@ -235,7 +237,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
     loadingLabelNode.fontColor = UIColor.lightGrayColor()
     loadingLabelNode.fontSize = 17
     loadingLabelNode.position = CGPoint(x: CGRectGetMidX(frame), y: CGRectGetMidY(frame))
-    loadingLabelNode.name = "loadingLabel"
+    loadingLabelNode.name = backgroundLabelName
     
     addChild(loadingLabelNode)
   }
@@ -245,6 +247,11 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
     
     let ball = childNodeWithName(ballName)
     ball?.physicsBody?.applyImpulse(CGVector(dx: -0.5, dy: 0.2))
+  }
+  
+  func updateLabel(text: String) {
+    let label = childNodeWithName(backgroundLabelName) as SKLabelNode
+    label.text = text
   }
   
   func moveHandle(value: CGFloat) {
