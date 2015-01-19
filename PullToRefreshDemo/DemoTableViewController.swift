@@ -67,7 +67,7 @@ extension DemoTableViewController: UIScrollViewDelegate {
 extension DemoTableViewController: BreakOutToRefreshDelegate {
   
   func refreshViewDidRefresh(refreshView: BreakOutToRefreshView) {
-    
+    // load stuff from the internet
   }
 
 }
