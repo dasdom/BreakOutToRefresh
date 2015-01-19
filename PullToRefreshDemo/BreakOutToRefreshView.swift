@@ -235,7 +235,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   func createLoadingLabelNode() {
     let loadingLabelNode = SKLabelNode(text: "Loading...")
     loadingLabelNode.fontColor = UIColor.lightGrayColor()
-    loadingLabelNode.fontSize = 17
+    loadingLabelNode.fontSize = 20
     loadingLabelNode.position = CGPoint(x: CGRectGetMidX(frame), y: CGRectGetMidY(frame))
     loadingLabelNode.name = backgroundLabelName
     
