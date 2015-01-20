@@ -290,7 +290,10 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   
   func createBall() {
     let ball = SKSpriteNode(color: ballColor, size: CGSize(width: 8, height: 8))
-    ball.position = CGPoint(x: frame.size.width - 30.0 - ball.size.width, y: CGRectGetMidY(frame))
+    
+    
+    ball.position = CGPoint(x: frame.size.width - 30.0 - ball.size.width, y: CGRectGetHeight(frame)*CGFloat(arc4random())/CGFloat(UINT32_MAX)
+)
     ball.name = ballName
     
     ball.physicsBody = SKPhysicsBody(circleOfRadius: ceil(ball.size.width/2.0))
