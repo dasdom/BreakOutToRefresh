@@ -76,7 +76,7 @@ Dominik Hauser
 
 ## Thanks
 
-Thanks to [boztalay](https://github.com/boztalay/BOZPongRefreshControl) and [raywenderlich.com](http://www.raywenderlich.com) for inspiration.
+Thanks to [Ben Oztalay](https://github.com/boztalay/BOZPongRefreshControl) and [raywenderlich.com](http://www.raywenderlich.com) for inspiration.
 
 ## Licence
 
