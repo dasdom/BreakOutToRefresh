@@ -62,7 +62,6 @@ This is an alpha version. I hacked it together within a few hours.
 
 - Add scoring
 - Add ending of the game when the ball hits the right wall
-- Add different colors
 - Add levels
 
 ## Author
@@ -77,7 +76,7 @@ Dominik Hauser
 
 ## Thanks
 
-Thanks to [raywenderlich.com](http://www.raywenderlich.com) for inspiration.
+Thanks to [boztalay](https://github.com/boztalay/BOZPongRefreshControl) and [raywenderlich.com](http://www.raywenderlich.com) for inspiration.
 
 ## Licence
 
