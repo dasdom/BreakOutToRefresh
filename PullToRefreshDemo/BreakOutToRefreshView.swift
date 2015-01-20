@@ -36,21 +36,50 @@ class BreakOutToRefreshView: SKView {
 
   private let sceneHeight = CGFloat(100)
   
-  let breakOutScene: BreakOutScene
+  private let breakOutScene: BreakOutScene
   private unowned let scrollView: UIScrollView
   weak var delegate: BreakOutToRefreshDelegate?
   var forceEnd = false
   
-  var isRefreshing = false
-  var isDragging = false
-  var isVisible = false
+  private var isRefreshing = false
+  private var isDragging = false
+  private var isVisible = false
+  
+  var scenebackgroundColor: UIColor {
+    didSet {
+      breakOutScene.scenebackgroundColor = scenebackgroundColor
+    }
+  }
+  
+  var paddleColor: UIColor {
+    didSet {
+      breakOutScene.paddleColor = paddleColor
+    }
+  }
+  var ballColor: UIColor {
+    didSet {
+      breakOutScene.ballColor = ballColor
+    }
+  }
+  
+  var blockColors: [UIColor] {
+    didSet {
+      breakOutScene.blockColors = blockColors
+    }
+  }
   
   override init(frame: CGRect) {
     assert(false, "Use init(scrollView:) instead.")
     breakOutScene = BreakOutScene(size: frame.size)
     scrollView = UIScrollView()
     
+    scenebackgroundColor = UIColor.whiteColor()
+    paddleColor = UIColor.whiteColor()
+    ballColor = UIColor.whiteColor()
+    blockColors = [UIColor.whiteColor()]
+    
     super.init(frame: frame)
+    
   }
   
   
@@ -61,6 +90,16 @@ class BreakOutToRefreshView: SKView {
     breakOutScene = BreakOutScene(size: frame.size)
     self.scrollView = inScrollView
     
+    scenebackgroundColor = UIColor.whiteColor()
+    paddleColor = UIColor.grayColor()
+    ballColor = UIColor.blackColor()
+    blockColors = [UIColor(white: 0.2, alpha: 1.0), UIColor(white: 0.4, alpha: 1.0), UIColor(white: 0.6, alpha: 1.0)]
+    
+    breakOutScene.scenebackgroundColor = scenebackgroundColor
+    breakOutScene.paddleColor = paddleColor
+    breakOutScene.ballColor = ballColor
+    breakOutScene.blockColors = blockColors
+
     super.init(frame: frame)
     
     layer.borderColor = UIColor.grayColor().CGColor
@@ -159,6 +198,11 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   var contentCreated = false
   var isStarted = false
   
+  var scenebackgroundColor: UIColor!
+  var paddleColor: UIColor!
+  var ballColor: UIColor!
+  var blockColors: [UIColor]!
+  
   override func didMoveToView(view: SKView) {
     super.didMoveToView(view)
     if !contentCreated {
@@ -185,7 +229,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
     physicsWorld.gravity = CGVectorMake(0.0, 0.0)
     physicsWorld.contactDelegate = self
     
-    backgroundColor = SKColor.whiteColor()
+    backgroundColor = scenebackgroundColor
     scaleMode = .AspectFit
     
     physicsBody = SKPhysicsBody(edgeLoopFromRect: frame)
@@ -204,7 +248,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func createPaddle() -> SKSpriteNode {
-    let paddle = SKSpriteNode(color: UIColor.grayColor(), size: CGSize(width: 5, height: 30))
+    let paddle = SKSpriteNode(color: paddleColor, size: CGSize(width: 5, height: 30))
     
     paddle.physicsBody = SKPhysicsBody(rectangleOfSize: paddle.size)
     paddle.physicsBody?.categoryBitMask = paddleCategory
@@ -219,11 +263,11 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   
   func createBlocks() {
     for i in 0..<3 {
-      var color = SKColor(white: 0.2, alpha: 1.0)
+      var color = blockColors.count > 0 ? blockColors[0] : UIColor(white: 0.2, alpha: 1.0)
       if i == 1 {
-        color = SKColor(white: 0.4, alpha: 1.0)
+        color = blockColors.count > 1 ? blockColors[1] : UIColor(white: 0.4, alpha: 1.0)
       } else if i == 2 {
-        color = SKColor(white: 0.6, alpha: 1.0)
+        color = blockColors.count > 2 ? blockColors[2] : UIColor(white: 0.6, alpha: 1.0)
       }
       
       for j in 0..<5 {
@@ -245,7 +289,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func createBall() {
-    let ball = SKSpriteNode(color: SKColor.blackColor(), size: CGSize(width: 8, height: 8))
+    let ball = SKSpriteNode(color: ballColor, size: CGSize(width: 8, height: 8))
     ball.position = CGPoint(x: frame.size.width - 30.0 - ball.size.width, y: CGRectGetMidY(frame))
     ball.name = ballName
     
