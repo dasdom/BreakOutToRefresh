@@ -63,6 +63,9 @@ class BreakOutToRefreshView: SKView {
     
     super.init(frame: frame)
     
+    layer.borderColor = UIColor.grayColor().CGColor
+    layer.borderWidth = 1.0
+    
     presentScene(StartScene(size: frame.size))
   }
 
@@ -76,7 +79,8 @@ class BreakOutToRefreshView: SKView {
     
     let doors = SKTransition.doorsOpenVerticalWithDuration(0.5)
     presentScene(breakOutScene, transition: doors)
-    
+    breakOutScene.updateLabel("Loading...")
+
     UIView.animateWithDuration(0.4, delay: 0, options: .CurveEaseInOut, animations: { () -> Void in
       self.scrollView.contentInset.top += self.sceneHeight
     }) { (_) -> Void in
@@ -181,7 +185,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
     physicsWorld.gravity = CGVectorMake(0.0, 0.0)
     physicsWorld.contactDelegate = self
     
-    backgroundColor = SKColor.blackColor()
+    backgroundColor = SKColor.whiteColor()
     scaleMode = .AspectFit
     
     physicsBody = SKPhysicsBody(edgeLoopFromRect: frame)
@@ -200,7 +204,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func createPaddle() -> SKSpriteNode {
-    let paddle = SKSpriteNode(color: UIColor.lightGrayColor(), size: CGSize(width: 5, height: 30))
+    let paddle = SKSpriteNode(color: UIColor.grayColor(), size: CGSize(width: 5, height: 30))
     
     paddle.physicsBody = SKPhysicsBody(rectangleOfSize: paddle.size)
     paddle.physicsBody?.categoryBitMask = paddleCategory
@@ -215,11 +219,11 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   
   func createBlocks() {
     for i in 0..<3 {
-      var color = SKColor.greenColor()
+      var color = SKColor(white: 0.2, alpha: 1.0)
       if i == 1 {
-        color = SKColor.redColor()
+        color = SKColor(white: 0.4, alpha: 1.0)
       } else if i == 2 {
-        color = SKColor.yellowColor()
+        color = SKColor(white: 0.6, alpha: 1.0)
       }
       
       for j in 0..<5 {
@@ -241,7 +245,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func createBall() {
-    let ball = SKSpriteNode(color: SKColor.whiteColor(), size: CGSize(width: 8, height: 8))
+    let ball = SKSpriteNode(color: SKColor.blackColor(), size: CGSize(width: 8, height: 8))
     ball.position = CGPoint(x: frame.size.width - 30.0 - ball.size.width, y: CGRectGetMidY(frame))
     ball.name = ballName
     
