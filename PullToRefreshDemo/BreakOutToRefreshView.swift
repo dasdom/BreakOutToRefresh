@@ -292,8 +292,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
     let ball = SKSpriteNode(color: ballColor, size: CGSize(width: 8, height: 8))
     
     
-    ball.position = CGPoint(x: frame.size.width - 30.0 - ball.size.width, y: CGRectGetHeight(frame)*CGFloat(arc4random())/CGFloat(UINT32_MAX)
-)
+    ball.position = CGPoint(x: frame.size.width - 30.0 - ball.size.width, y: CGRectGetHeight(frame)*CGFloat(arc4random())/CGFloat(UINT32_MAX))
     ball.name = ballName
     
     ball.physicsBody = SKPhysicsBody(circleOfRadius: ceil(ball.size.width/2.0))
@@ -309,6 +308,11 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
     addChild(ball)
   }
   
+  func removeBall() {
+    let ball = childNodeWithName(ballName)
+    ball?.removeFromParent()
+  }
+  
   func createLoadingLabelNode() {
     let loadingLabelNode = SKLabelNode(text: "Loading...")
     loadingLabelNode.fontColor = UIColor.lightGrayColor()
@@ -317,6 +321,12 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
     loadingLabelNode.name = backgroundLabelName
     
     addChild(loadingLabelNode)
+  }
+  
+  func reset() {
+    createBlocks()
+    removeBall()
+    createBall()
   }
   
   func start() {
@@ -379,7 +389,8 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
     if otherBody != nil && (otherBody!.categoryBitMask & blockCategory != 0) {
       otherBody!.node?.removeFromParent()
       if isGameWon() {
-        createBlocks()
+        reset()
+        start()
       }
       return
     }
