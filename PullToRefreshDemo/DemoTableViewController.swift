@@ -19,6 +19,12 @@ class DemoTableViewController: UITableViewController {
     refreshView = BreakOutToRefreshView(scrollView: tableView)
     refreshView.delegate = self
     
+    // configure the refresh view
+//    refreshView.scenebackgroundColor = UIColor(hue: 0.68, saturation: 0.9, brightness: 0.3, alpha: 1.0)
+//    refreshView.paddleColor = UIColor.lightGrayColor()
+//    refreshView.ballColor = UIColor.whiteColor()
+//    refreshView.blockColors = [UIColor(hue: 0.17, saturation: 0.9, brightness: 1.0, alpha: 1.0), UIColor(hue: 0.17, saturation: 0.7, brightness: 1.0, alpha: 1.0), UIColor(hue: 0.17, saturation: 0.5, brightness: 1.0, alpha: 1.0)]
+    
     tableView.addSubview(refreshView)
     
   }
@@ -44,9 +50,6 @@ class DemoTableViewController: UITableViewController {
     return cell
   }
   
-  @IBAction func stopRefreshing(sender: UIBarButtonItem) {
-    refreshView.endRefreshing()
-  }
 }
 
 extension DemoTableViewController: UIScrollViewDelegate {

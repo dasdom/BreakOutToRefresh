@@ -33,13 +33,7 @@
                             <outlet property="delegate" destination="4uv-ph-uMY" id="Tvc-Wq-bvV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Vc6-wJ-eX4">
-                        <barButtonItem key="rightBarButtonItem" title="stop" id="G6Q-RQ-2u7">
-                            <connections>
-                                <action selector="stopRefreshing:" destination="4uv-ph-uMY" id="8nx-0C-0US"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Vc6-wJ-eX4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBY-M0-Nms" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
