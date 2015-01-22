@@ -12,7 +12,7 @@ Add **BreakOutToRefreshView.swift** to you project.
 ## Usage
 
 Add this to your table view controller:
-```
+```swift
 var refreshView: BreakOutToRefreshView!
   
   override func viewDidLoad() {
@@ -21,6 +21,12 @@ var refreshView: BreakOutToRefreshView!
     let refreshHeight = CGFloat(100)
     refreshView = BreakOutToRefreshView(scrollView: tableView)
     refreshView.delegate = self
+    
+    // configure the colors of the refresh view
+    refreshView.scenebackgroundColor = UIColor(hue: 0.68, saturation: 0.9, brightness: 0.3, alpha: 1.0)
+    refreshView.paddleColor = UIColor.lightGrayColor()
+    refreshView.ballColor = UIColor.whiteColor()
+    refreshView.blockColors = [UIColor(hue: 0.17, saturation: 0.9, brightness: 1.0, alpha: 1.0), UIColor(hue: 0.17, saturation: 0.7, brightness: 1.0, alpha: 1.0), UIColor(hue: 0.17, saturation: 0.5, brightness: 1.0, alpha: 1.0)]
     
     tableView.addSubview(refreshView)
     
