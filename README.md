@@ -70,6 +70,10 @@ It's kind of beta status.
 - Add ending of the game when the ball hits the right wall
 - Add levels
 
+## Feedback
+
+If you use this code or got inspired by the idea and build an app with a even more awesome PullToRefresh game, please let me know.
+
 ## Author
 
 Dominik Hauser
