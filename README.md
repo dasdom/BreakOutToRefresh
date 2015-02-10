@@ -62,13 +62,17 @@ When `endRefreshing()` is called the mini game doesn't stop immediately. The gam
 
 ## Status
 
-This is an alpha version. I hacked it together within a few hours.
+It's kind of beta status.
 
 ## To do
 
 - Add scoring
 - Add ending of the game when the ball hits the right wall
 - Add levels
+
+## Feedback
+
+If you use this code or got inspired by the idea and build an app with a even more awesome PullToRefresh game, please let me know.
 
 ## Author
 
