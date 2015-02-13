@@ -337,8 +337,8 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func updateLabel(text: String) {
-    let label = childNodeWithName(backgroundLabelName) as! SKLabelNode
-    label.text = text
+    let label : SKLabelNode! = childNodeWithName(backgroundLabelName) as? SKLabelNode;
+    label?.text = text
   }
   
   func moveHandle(value: CGFloat) {
