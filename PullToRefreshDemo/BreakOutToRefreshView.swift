@@ -79,7 +79,6 @@ class BreakOutToRefreshView: SKView {
     blockColors = [UIColor.whiteColor()]
     
     super.init(frame: frame)
-    
   }
   
   
