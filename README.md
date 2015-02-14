@@ -11,7 +11,7 @@ The code is updated for Swift 1.2. If you like to use it with Xcode 6.1.1 and Sw
 
 ## Installation
 
-Add **BreakOutToRefreshView.swift** to you project.
+Add **BreakOutToRefreshView.swift** to your project.
 
 ## Usage
 
