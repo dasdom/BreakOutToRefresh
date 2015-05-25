@@ -28,47 +28,47 @@
 import UIKit
 import SpriteKit
 
-protocol BreakOutToRefreshDelegate: class {
+public protocol BreakOutToRefreshDelegate: class {
   func refreshViewDidRefresh(refreshView: BreakOutToRefreshView)
 }
 
-class BreakOutToRefreshView: SKView {
+public class BreakOutToRefreshView: SKView {
 
   private let sceneHeight = CGFloat(100)
 
   private let breakOutScene: BreakOutScene
   private unowned let scrollView: UIScrollView
-  weak var delegate: BreakOutToRefreshDelegate?
-  var forceEnd = false
+  public weak var delegate: BreakOutToRefreshDelegate?
+  public var forceEnd = false
 
-  var isRefreshing = false
+  public var isRefreshing = false
   private var isDragging = false
   private var isVisible = false
 
-  var scenebackgroundColor: UIColor {
+  public var scenebackgroundColor: UIColor {
     didSet {
       breakOutScene.scenebackgroundColor = scenebackgroundColor
     }
   }
 
-  var paddleColor: UIColor {
+  public var paddleColor: UIColor {
     didSet {
       breakOutScene.paddleColor = paddleColor
     }
   }
-  var ballColor: UIColor {
+  public var ballColor: UIColor {
     didSet {
       breakOutScene.ballColor = ballColor
     }
   }
 
-  var blockColors: [UIColor] {
+  public var blockColors: [UIColor] {
     didSet {
       breakOutScene.blockColors = blockColors
     }
   }
 
-  override init(frame: CGRect) {
+  public override init(frame: CGRect) {
     assert(false, "Use init(scrollView:) instead.")
     breakOutScene = BreakOutScene(size: frame.size)
     scrollView = UIScrollView()
@@ -82,7 +82,7 @@ class BreakOutToRefreshView: SKView {
   }
 
 
-  init(scrollView inScrollView: UIScrollView) {
+  public init(scrollView inScrollView: UIScrollView) {
 
     let frame = CGRect(x: 0.0, y: -sceneHeight, width: inScrollView.frame.size.width, height: sceneHeight)
 
@@ -107,12 +107,12 @@ class BreakOutToRefreshView: SKView {
     presentScene(StartScene(size: frame.size))
   }
 
-  required init(coder aDecoder: NSCoder) {
+  public required init(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 
 
-  func beginRefreshing() {
+  public func beginRefreshing() {
     isRefreshing = true
 
     let doors = SKTransition.doorsOpenVerticalWithDuration(0.5)
@@ -130,7 +130,7 @@ class BreakOutToRefreshView: SKView {
     }
   }
 
-  func endRefreshing() {
+  public func endRefreshing() {
     if (!isDragging || forceEnd) && isVisible {
       self.isVisible = false
       UIView.animateWithDuration(0.4, delay: 0, options: .CurveEaseInOut, animations: { () -> Void in
@@ -148,11 +148,11 @@ class BreakOutToRefreshView: SKView {
 
 extension BreakOutToRefreshView: UIScrollViewDelegate {
 
-  func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+  public func scrollViewWillBeginDragging(scrollView: UIScrollView) {
     isDragging = true
   }
 
-  func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+  public func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
     isDragging = false
 
     if !isRefreshing && scrollView.contentOffset.y + scrollView.contentInset.top < -sceneHeight {
@@ -167,7 +167,7 @@ extension BreakOutToRefreshView: UIScrollViewDelegate {
 
   }
 
-  func scrollViewDidScroll(scrollView: UIScrollView) {
+  public func scrollViewDidScroll(scrollView: UIScrollView) {
     let frameHeight = frame.size.height
     let yPosition = sceneHeight - (-scrollView.contentInset.top-scrollView.contentOffset.y)*2
 
