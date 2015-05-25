@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89CB98551B12C77700C87160 /* BreakOutToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 89CB98541B12C77700C87160 /* BreakOutToRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89CB98691B12C7CF00C87160 /* BreakOutToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9D7A01A6B05BF0041B9C5 /* BreakOutToRefreshView.swift */; };
 		F2DA3FB61A6B009300F5576F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA3FB51A6B009300F5576F /* AppDelegate.swift */; };
 		F2DA3FBB1A6B009300F5576F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2DA3FB91A6B009300F5576F /* Main.storyboard */; };
 		F2DA3FBD1A6B009300F5576F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2DA3FBC1A6B009300F5576F /* Images.xcassets */; };
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89CB98501B12C77700C87160 /* BreakOutToRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BreakOutToRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89CB98531B12C77700C87160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89CB98541B12C77700C87160 /* BreakOutToRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BreakOutToRefresh.h; sourceTree = "<group>"; };
 		F2DA3FB01A6B009300F5576F /* PullToRefreshDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PullToRefreshDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2DA3FB41A6B009300F5576F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2DA3FB51A6B009300F5576F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +46,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		89CB984C1B12C77700C87160 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F2DA3FAD1A6B009300F5576F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,11 +70,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89CB98511B12C77700C87160 /* PullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				89CB98541B12C77700C87160 /* BreakOutToRefresh.h */,
+				89CB98521B12C77700C87160 /* Supporting Files */,
+			);
+			path = PullToRefresh;
+			sourceTree = "<group>";
+		};
+		89CB98521B12C77700C87160 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89CB98531B12C77700C87160 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F2DA3FA71A6B009200F5576F = {
 			isa = PBXGroup;
 			children = (
 				F2DA3FB21A6B009300F5576F /* PullToRefreshDemo */,
 				F2DA3FC81A6B009300F5576F /* PullToRefreshDemoTests */,
+				89CB98511B12C77700C87160 /* PullToRefresh */,
 				F2DA3FB11A6B009300F5576F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +102,7 @@
 			children = (
 				F2DA3FB01A6B009300F5576F /* PullToRefreshDemo.app */,
 				F2DA3FC51A6B009300F5576F /* PullToRefreshDemoTests.xctest */,
+				89CB98501B12C77700C87160 /* BreakOutToRefresh.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,7 +148,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		89CB984D1B12C77700C87160 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CB98551B12C77700C87160 /* BreakOutToRefresh.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		89CB984F1B12C77700C87160 /* PullToRefresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89CB98671B12C77700C87160 /* Build configuration list for PBXNativeTarget "PullToRefresh" */;
+			buildPhases = (
+				89CB984B1B12C77700C87160 /* Sources */,
+				89CB984C1B12C77700C87160 /* Frameworks */,
+				89CB984D1B12C77700C87160 /* Headers */,
+				89CB984E1B12C77700C87160 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PullToRefresh;
+			productName = PullToRefresh;
+			productReference = 89CB98501B12C77700C87160 /* BreakOutToRefresh.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		F2DA3FAF1A6B009300F5576F /* PullToRefreshDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F2DA3FCF1A6B009300F5576F /* Build configuration list for PBXNativeTarget "PullToRefreshDemo" */;
@@ -162,6 +222,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Dominik Hauser";
 				TargetAttributes = {
+					89CB984F1B12C77700C87160 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
 					F2DA3FAF1A6B009300F5576F = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -186,11 +249,19 @@
 			targets = (
 				F2DA3FAF1A6B009300F5576F /* PullToRefreshDemo */,
 				F2DA3FC41A6B009300F5576F /* PullToRefreshDemoTests */,
+				89CB984F1B12C77700C87160 /* PullToRefresh */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		89CB984E1B12C77700C87160 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F2DA3FAE1A6B009300F5576F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -211,6 +282,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		89CB984B1B12C77700C87160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CB98691B12C7CF00C87160 /* BreakOutToRefreshView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F2DA3FAC1A6B009300F5576F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,6 +338,55 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		89CB98631B12C77700C87160 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PullToRefresh/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = BreakOutToRefresh;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		89CB98641B12C77700C87160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = PullToRefresh/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = BreakOutToRefresh;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		F2DA3FCD1A6B009300F5576F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -393,6 +521,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		89CB98671B12C77700C87160 /* Build configuration list for PBXNativeTarget "PullToRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89CB98631B12C77700C87160 /* Debug */,
+				89CB98641B12C77700C87160 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F2DA3FAB1A6B009200F5576F /* Build configuration list for PBXProject "PullToRefreshDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
