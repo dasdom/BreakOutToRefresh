@@ -69,18 +69,8 @@ public class BreakOutToRefreshView: SKView {
   }
 
   public override init(frame: CGRect) {
-    assert(false, "Use init(scrollView:) instead.")
-    breakOutScene = BreakOutScene(size: frame.size)
-    scrollView = UIScrollView()
-
-    scenebackgroundColor = UIColor.whiteColor()
-    paddleColor = UIColor.whiteColor()
-    ballColor = UIColor.whiteColor()
-    blockColors = [UIColor.whiteColor()]
-
-    super.init(frame: frame)
+    fatalError("Use init(scrollView:) instead.")
   }
-
 
   public init(scrollView inScrollView: UIScrollView) {
 
@@ -168,7 +158,6 @@ extension BreakOutToRefreshView: UIScrollViewDelegate {
   }
 
   public func scrollViewDidScroll(scrollView: UIScrollView) {
-    let frameHeight = frame.size.height
     let yPosition = sceneHeight - (-scrollView.contentInset.top-scrollView.contentOffset.y)*2
 
     breakOutScene.moveHandle(yPosition)
