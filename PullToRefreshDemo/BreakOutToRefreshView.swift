@@ -28,7 +28,7 @@
 import UIKit
 import SpriteKit
 
-public protocol BreakOutToRefreshDelegate: class {
+@objc public protocol BreakOutToRefreshDelegate: class {
   func refreshViewDidRefresh(refreshView: BreakOutToRefreshView)
 }
 

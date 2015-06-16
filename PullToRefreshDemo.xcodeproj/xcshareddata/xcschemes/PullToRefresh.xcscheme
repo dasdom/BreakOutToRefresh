@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "89CB984F1B12C77700C87160"
-               BuildableName = "PullToRefresh.framework"
+               BuildableName = "BreakOutToRefresh.framework"
                BlueprintName = "PullToRefresh"
                ReferencedContainer = "container:PullToRefreshDemo.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "89CB984F1B12C77700C87160"
-            BuildableName = "PullToRefresh.framework"
+            BuildableName = "BreakOutToRefresh.framework"
             BlueprintName = "PullToRefresh"
             ReferencedContainer = "container:PullToRefreshDemo.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "89CB984F1B12C77700C87160"
-            BuildableName = "PullToRefresh.framework"
+            BuildableName = "BreakOutToRefresh.framework"
             BlueprintName = "PullToRefresh"
             ReferencedContainer = "container:PullToRefreshDemo.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "89CB984F1B12C77700C87160"
-            BuildableName = "PullToRefresh.framework"
+            BuildableName = "BreakOutToRefresh.framework"
             BlueprintName = "PullToRefresh"
             ReferencedContainer = "container:PullToRefreshDemo.xcodeproj">
          </BuildableReference>

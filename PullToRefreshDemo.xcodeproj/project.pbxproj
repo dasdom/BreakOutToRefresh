@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		89CB98551B12C77700C87160 /* BreakOutToRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 89CB98541B12C77700C87160 /* BreakOutToRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89CB98691B12C7CF00C87160 /* BreakOutToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9D7A01A6B05BF0041B9C5 /* BreakOutToRefreshView.swift */; };
+		F27D845F1B30AA1400894E82 /* ObjcTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27D845E1B30AA1400894E82 /* ObjcTableViewController.m */; };
 		F2DA3FB61A6B009300F5576F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA3FB51A6B009300F5576F /* AppDelegate.swift */; };
 		F2DA3FBB1A6B009300F5576F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2DA3FB91A6B009300F5576F /* Main.storyboard */; };
 		F2DA3FBD1A6B009300F5576F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2DA3FBC1A6B009300F5576F /* Images.xcassets */; };
@@ -32,6 +33,9 @@
 		89CB98501B12C77700C87160 /* BreakOutToRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BreakOutToRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89CB98531B12C77700C87160 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89CB98541B12C77700C87160 /* BreakOutToRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BreakOutToRefresh.h; sourceTree = "<group>"; };
+		F27D845C1B30AA1400894E82 /* PullToRefreshDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PullToRefreshDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		F27D845D1B30AA1400894E82 /* ObjcTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcTableViewController.h; sourceTree = "<group>"; };
+		F27D845E1B30AA1400894E82 /* ObjcTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcTableViewController.m; sourceTree = "<group>"; };
 		F2DA3FB01A6B009300F5576F /* PullToRefreshDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PullToRefreshDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2DA3FB41A6B009300F5576F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2DA3FB51A6B009300F5576F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,11 +116,14 @@
 			children = (
 				F2DA3FB51A6B009300F5576F /* AppDelegate.swift */,
 				F2DA3FD51A6B01A100F5576F /* DemoTableViewController.swift */,
+				F27D845D1B30AA1400894E82 /* ObjcTableViewController.h */,
+				F27D845E1B30AA1400894E82 /* ObjcTableViewController.m */,
 				F2F9D7A01A6B05BF0041B9C5 /* BreakOutToRefreshView.swift */,
 				F2DA3FB91A6B009300F5576F /* Main.storyboard */,
 				F2DA3FBC1A6B009300F5576F /* Images.xcassets */,
 				F2DA3FBE1A6B009300F5576F /* LaunchScreen.xib */,
 				F2DA3FB31A6B009300F5576F /* Supporting Files */,
+				F27D845C1B30AA1400894E82 /* PullToRefreshDemo-Bridging-Header.h */,
 			);
 			path = PullToRefreshDemo;
 			sourceTree = "<group>";
@@ -296,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2F9D7A11A6B05BF0041B9C5 /* BreakOutToRefreshView.swift in Sources */,
+				F27D845F1B30AA1400894E82 /* ObjcTableViewController.m in Sources */,
 				F2DA3FD61A6B01A100F5576F /* DemoTableViewController.swift in Sources */,
 				F2DA3FB61A6B009300F5576F /* AppDelegate.swift in Sources */,
 			);
@@ -469,9 +477,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PullToRefreshDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PullToRefreshDemo/PullToRefreshDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -479,9 +490,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PullToRefreshDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PullToRefreshDemo/PullToRefreshDemo-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -529,6 +542,7 @@
 				89CB98641B12C77700C87160 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2DA3FAB1A6B009200F5576F /* Build configuration list for PBXProject "PullToRefreshDemo" */ = {
 			isa = XCConfigurationList;

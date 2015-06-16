@@ -29,15 +29,8 @@ class DemoTableViewController: UITableViewController {
     
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
   // MARK: - Table view data source
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // #warning Incomplete method implementation.
-    // Return the number of rows in the section.
     return 20
   }
   
@@ -70,7 +63,7 @@ extension DemoTableViewController: UIScrollViewDelegate {
 extension DemoTableViewController: BreakOutToRefreshDelegate {
   
   func refreshViewDidRefresh(refreshView: BreakOutToRefreshView) {
-    // load stuff from the internet
+    // this code is to simulage the loading from the internet
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC * 3)), dispatch_get_main_queue(), { () -> Void in
       refreshView.endRefreshing()
     })
