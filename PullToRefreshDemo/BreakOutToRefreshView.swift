@@ -193,16 +193,19 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   }
 
   override func update(currentTime: NSTimeInterval) {
-    let ball = self.childNodeWithName(ballName) as! SKSpriteNode!
+    guard let ball = self.childNodeWithName(ballName) as? SKSpriteNode,
+          let physicsBody = ball.physicsBody else {
+        return;
+    }
 
     let maxSpeed: CGFloat = 600.0
-    let speed = sqrt(ball.physicsBody!.velocity.dx * ball.physicsBody!.velocity.dx + ball.physicsBody!.velocity.dy * ball.physicsBody!.velocity.dy)
+    let speed = sqrt(physicsBody.velocity.dx * physicsBody.velocity.dx + physicsBody.velocity.dy * physicsBody.velocity.dy)
 
     if speed > maxSpeed {
-      ball.physicsBody!.linearDamping = 0.4
+      physicsBody.linearDamping = 0.4
     }
     else {
-      ball.physicsBody!.linearDamping = 0.0
+      physicsBody.linearDamping = 0.0
     }
   }
 
@@ -376,8 +379,8 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
       ballBody?.velocity = velocity
     }
 
-    if otherBody != nil && (otherBody!.categoryBitMask & blockCategory != 0) && otherBody!.categoryBitMask == blockCategory {
-      otherBody!.node?.removeFromParent()
+    if let body = otherBody where (body.categoryBitMask & blockCategory != 0) && body.categoryBitMask == blockCategory {
+      body.node?.removeFromParent()
       if isGameWon() {
         reset()
         start()
@@ -395,7 +398,6 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
 }
 
 class StartScene: SKScene {
-
   var contentCreated = false
 
   override func didMoveToView(view: SKView) {
@@ -432,5 +434,4 @@ class StartScene: SKScene {
 
     return descriptionNode
   }
-
 }
