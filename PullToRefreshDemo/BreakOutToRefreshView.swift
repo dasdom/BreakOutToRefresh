@@ -48,6 +48,14 @@ public class BreakOutToRefreshView: SKView {
   public var scenebackgroundColor: UIColor {
     didSet {
       breakOutScene.scenebackgroundColor = scenebackgroundColor
+      startScene.backgroundColor = scenebackgroundColor
+    }
+  }
+
+  public var textColor: UIColor {
+    didSet {
+      breakOutScene.textColor = textColor
+      startScene.textColor = textColor
     }
   }
 
@@ -68,12 +76,20 @@ public class BreakOutToRefreshView: SKView {
     }
   }
 
+  private lazy var startScene: StartScene = {
+    let size = CGSize(width: self.scrollView.frame.size.width, height: self.sceneHeight)
+    let startScene = StartScene(size: size)
+    startScene.backgroundColor = self.scenebackgroundColor
+    return startScene
+  }()
+
   public override init(frame: CGRect) {
     assert(false, "Use init(scrollView:) instead.")
     breakOutScene = BreakOutScene(size: frame.size)
     scrollView = UIScrollView()
 
     scenebackgroundColor = UIColor.whiteColor()
+    textColor = UIColor.blackColor()
     paddleColor = UIColor.whiteColor()
     ballColor = UIColor.whiteColor()
     blockColors = [UIColor.whiteColor()]
@@ -90,11 +106,13 @@ public class BreakOutToRefreshView: SKView {
     self.scrollView = inScrollView
 
     scenebackgroundColor = UIColor.whiteColor()
+    textColor = UIColor.blackColor()
     paddleColor = UIColor.grayColor()
     ballColor = UIColor.blackColor()
     blockColors = [UIColor(white: 0.2, alpha: 1.0), UIColor(white: 0.4, alpha: 1.0), UIColor(white: 0.6, alpha: 1.0)]
 
     breakOutScene.scenebackgroundColor = scenebackgroundColor
+    breakOutScene.textColor = textColor
     breakOutScene.paddleColor = paddleColor
     breakOutScene.ballColor = ballColor
     breakOutScene.blockColors = blockColors
@@ -104,7 +122,7 @@ public class BreakOutToRefreshView: SKView {
     layer.borderColor = UIColor.grayColor().CGColor
     layer.borderWidth = 1.0
 
-    presentScene(StartScene(size: frame.size))
+    presentScene(startScene)
   }
 
   public required init(coder aDecoder: NSCoder) {
@@ -191,6 +209,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   var isStarted = false
 
   var scenebackgroundColor: UIColor!
+  var textColor: UIColor!
   var paddleColor: UIColor!
   var ballColor: UIColor!
   var blockColors: [UIColor]!
@@ -321,7 +340,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
 
   func createLoadingLabelNode() {
     let loadingLabelNode = SKLabelNode(text: "Loading...")
-    loadingLabelNode.fontColor = UIColor.lightGrayColor()
+    loadingLabelNode.fontColor = textColor
     loadingLabelNode.fontSize = 20
     loadingLabelNode.position = CGPoint(x: CGRectGetMidX(frame), y: CGRectGetMidY(frame))
     loadingLabelNode.name = backgroundLabelName
@@ -409,6 +428,33 @@ class StartScene: SKScene {
 
   var contentCreated = false
 
+  var textColor = SKColor.blackColor() {
+    didSet {
+      self.startLabelNode.fontColor = textColor
+      self.descriptionLabelNode.fontColor = textColor
+    }
+  }
+
+  lazy var startLabelNode: SKLabelNode = {
+    let startNode = SKLabelNode(text: "Pull to Break Out!")
+    startNode.fontColor = self.textColor
+    startNode.fontSize = 20
+    startNode.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
+    startNode.name = "start"
+
+    return startNode
+  }()
+
+  lazy var descriptionLabelNode: SKLabelNode = {
+    let descriptionNode = SKLabelNode(text: "Scroll to move handle")
+    descriptionNode.fontColor = self.textColor
+    descriptionNode.fontSize = 17
+    descriptionNode.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame)-20)
+    descriptionNode.name = "description"
+
+    return descriptionNode
+  }()
+
   override func didMoveToView(view: SKView) {
     super.didMoveToView(view)
     if !contentCreated {
@@ -416,32 +462,10 @@ class StartScene: SKScene {
       contentCreated = true
     }
   }
-  
+
   func createSceneContents() {
-    backgroundColor = SKColor.whiteColor()
     scaleMode = .AspectFit
-    addChild(startLabelNode())
-    addChild(descriptionLabelNode())
+    addChild(startLabelNode)
+    addChild(descriptionLabelNode)
   }
-  
-  func startLabelNode() -> SKLabelNode {
-    let startNode = SKLabelNode(text: "Pull to Break Out!")
-    startNode.fontColor = UIColor.blackColor()
-    startNode.fontSize = 20
-    startNode.position = CGPoint(x: CGRectGetMidX(frame), y: CGRectGetMidY(frame))
-    startNode.name = "start"
-
-    return startNode
-  }
-  
-  func descriptionLabelNode() -> SKLabelNode {
-    let descriptionNode = SKLabelNode(text: "Scroll to move handle")
-    descriptionNode.fontColor = UIColor.blackColor()
-    descriptionNode.fontSize = 17
-    descriptionNode.position = CGPoint(x: CGRectGetMidX(frame), y: CGRectGetMidY(frame)-20)
-    descriptionNode.name = "description"
-
-    return descriptionNode
-  }
-
 }
