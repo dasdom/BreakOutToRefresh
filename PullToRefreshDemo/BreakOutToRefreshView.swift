@@ -84,19 +84,8 @@ public class BreakOutToRefreshView: SKView {
   }()
 
   public override init(frame: CGRect) {
-    assert(false, "Use init(scrollView:) instead.")
-    breakOutScene = BreakOutScene(size: frame.size)
-    scrollView = UIScrollView()
-
-    scenebackgroundColor = UIColor.whiteColor()
-    textColor = UIColor.blackColor()
-    paddleColor = UIColor.whiteColor()
-    ballColor = UIColor.whiteColor()
-    blockColors = [UIColor.whiteColor()]
-
-    super.init(frame: frame)
+    fatalError("Use init(scrollView:) instead.")
   }
-
 
   public init(scrollView inScrollView: UIScrollView) {
 
@@ -186,7 +175,6 @@ extension BreakOutToRefreshView: UIScrollViewDelegate {
   }
 
   public func scrollViewDidScroll(scrollView: UIScrollView) {
-    let frameHeight = frame.size.height
     let yPosition = sceneHeight - (-scrollView.contentInset.top-scrollView.contentOffset.y)*2
 
     breakOutScene.moveHandle(yPosition)
@@ -223,16 +211,19 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
   }
 
   override func update(currentTime: NSTimeInterval) {
-    let ball = self.childNodeWithName(ballName) as! SKSpriteNode!
+    guard let ball = self.childNodeWithName(ballName) as? SKSpriteNode,
+          let physicsBody = ball.physicsBody else {
+        return;
+    }
 
     let maxSpeed: CGFloat = 600.0
-    let speed = sqrt(ball.physicsBody!.velocity.dx * ball.physicsBody!.velocity.dx + ball.physicsBody!.velocity.dy * ball.physicsBody!.velocity.dy)
+    let speed = sqrt(physicsBody.velocity.dx * physicsBody.velocity.dx + physicsBody.velocity.dy * physicsBody.velocity.dy)
 
     if speed > maxSpeed {
-      ball.physicsBody!.linearDamping = 0.4
+      physicsBody.linearDamping = 0.4
     }
     else {
-      ball.physicsBody!.linearDamping = 0.0
+      physicsBody.linearDamping = 0.0
     }
   }
 
@@ -406,8 +397,8 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
       ballBody?.velocity = velocity
     }
 
-    if otherBody != nil && (otherBody!.categoryBitMask & blockCategory != 0) && otherBody!.categoryBitMask == blockCategory {
-      otherBody!.node?.removeFromParent()
+    if let body = otherBody where (body.categoryBitMask & blockCategory != 0) && body.categoryBitMask == blockCategory {
+      body.node?.removeFromParent()
       if isGameWon() {
         reset()
         start()
@@ -425,7 +416,6 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
 }
 
 class StartScene: SKScene {
-
   var contentCreated = false
 
   var textColor = SKColor.blackColor() {
@@ -461,11 +451,5 @@ class StartScene: SKScene {
       createSceneContents()
       contentCreated = true
     }
-  }
-
-  func createSceneContents() {
-    scaleMode = .AspectFit
-    addChild(startLabelNode)
-    addChild(descriptionLabelNode)
   }
 }
