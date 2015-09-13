@@ -452,4 +452,10 @@ class StartScene: SKScene {
       contentCreated = true
     }
   }
+
+  func createSceneContents() {
+    scaleMode = .AspectFit
+    addChild(startLabelNode)
+    addChild(descriptionLabelNode)
+  }
 }
