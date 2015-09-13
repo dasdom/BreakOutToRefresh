@@ -80,6 +80,7 @@ public class BreakOutToRefreshView: SKView {
     let size = CGSize(width: self.scrollView.frame.size.width, height: self.sceneHeight)
     let startScene = StartScene(size: size)
     startScene.backgroundColor = self.scenebackgroundColor
+    startScene.textColor = self.textColor
     return startScene
   }()
 
@@ -144,7 +145,7 @@ public class BreakOutToRefreshView: SKView {
         self.scrollView.contentInset.top -= self.sceneHeight
         }) { (_) -> Void in
           self.isRefreshing = false
-          self.presentScene(StartScene(size: self.frame.size))
+          self.presentScene(self.startScene)
       }
     } else {
       breakOutScene.updateLabel("Loading Finished")

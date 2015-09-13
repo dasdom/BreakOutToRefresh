@@ -15,7 +15,7 @@ class DemoTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let refreshHeight = CGFloat(100)
+//    let refreshHeight = CGFloat(100)
     refreshView = BreakOutToRefreshView(scrollView: tableView)
     refreshView.delegate = self
     
@@ -37,7 +37,7 @@ class DemoTableViewController: UITableViewController {
   
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("DemoCell", forIndexPath: indexPath) as! UITableViewCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("DemoCell", forIndexPath: indexPath)
     
     cell.textLabel?.text = "Row \(indexPath.row)"
     
