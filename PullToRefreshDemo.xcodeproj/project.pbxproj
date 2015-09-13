@@ -14,20 +14,9 @@
 		F2DA3FBB1A6B009300F5576F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2DA3FB91A6B009300F5576F /* Main.storyboard */; };
 		F2DA3FBD1A6B009300F5576F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2DA3FBC1A6B009300F5576F /* Images.xcassets */; };
 		F2DA3FC01A6B009300F5576F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2DA3FBE1A6B009300F5576F /* LaunchScreen.xib */; };
-		F2DA3FCC1A6B009300F5576F /* PullToRefreshDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA3FCB1A6B009300F5576F /* PullToRefreshDemoTests.swift */; };
 		F2DA3FD61A6B01A100F5576F /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA3FD51A6B01A100F5576F /* DemoTableViewController.swift */; };
 		F2F9D7A11A6B05BF0041B9C5 /* BreakOutToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F9D7A01A6B05BF0041B9C5 /* BreakOutToRefreshView.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F2DA3FC61A6B009300F5576F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F2DA3FA81A6B009200F5576F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F2DA3FAF1A6B009300F5576F;
-			remoteInfo = PullToRefreshDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		89CB98501B12C77700C87160 /* BreakOutToRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BreakOutToRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,9 +31,6 @@
 		F2DA3FBA1A6B009300F5576F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F2DA3FBC1A6B009300F5576F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F2DA3FBF1A6B009300F5576F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		F2DA3FC51A6B009300F5576F /* PullToRefreshDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PullToRefreshDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2DA3FCA1A6B009300F5576F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2DA3FCB1A6B009300F5576F /* PullToRefreshDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefreshDemoTests.swift; sourceTree = "<group>"; };
 		F2DA3FD51A6B01A100F5576F /* DemoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
 		F2F9D7A01A6B05BF0041B9C5 /* BreakOutToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreakOutToRefreshView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,13 +44,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F2DA3FAD1A6B009300F5576F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F2DA3FC21A6B009300F5576F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -95,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				F2DA3FB21A6B009300F5576F /* PullToRefreshDemo */,
-				F2DA3FC81A6B009300F5576F /* PullToRefreshDemoTests */,
 				89CB98511B12C77700C87160 /* PullToRefresh */,
 				F2DA3FB11A6B009300F5576F /* Products */,
 			);
@@ -105,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				F2DA3FB01A6B009300F5576F /* PullToRefreshDemo.app */,
-				F2DA3FC51A6B009300F5576F /* PullToRefreshDemoTests.xctest */,
 				89CB98501B12C77700C87160 /* BreakOutToRefresh.framework */,
 			);
 			name = Products;
@@ -132,23 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				F2DA3FB41A6B009300F5576F /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F2DA3FC81A6B009300F5576F /* PullToRefreshDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				F2DA3FCB1A6B009300F5576F /* PullToRefreshDemoTests.swift */,
-				F2DA3FC91A6B009300F5576F /* Supporting Files */,
-			);
-			path = PullToRefreshDemoTests;
-			sourceTree = "<group>";
-		};
-		F2DA3FC91A6B009300F5576F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F2DA3FCA1A6B009300F5576F /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -202,24 +162,6 @@
 			productReference = F2DA3FB01A6B009300F5576F /* PullToRefreshDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F2DA3FC41A6B009300F5576F /* PullToRefreshDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F2DA3FD21A6B009300F5576F /* Build configuration list for PBXNativeTarget "PullToRefreshDemoTests" */;
-			buildPhases = (
-				F2DA3FC11A6B009300F5576F /* Sources */,
-				F2DA3FC21A6B009300F5576F /* Frameworks */,
-				F2DA3FC31A6B009300F5576F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F2DA3FC71A6B009300F5576F /* PBXTargetDependency */,
-			);
-			name = PullToRefreshDemoTests;
-			productName = PullToRefreshDemoTests;
-			productReference = F2DA3FC51A6B009300F5576F /* PullToRefreshDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -227,7 +169,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Dominik Hauser";
 				TargetAttributes = {
 					89CB984F1B12C77700C87160 = {
@@ -235,10 +177,6 @@
 					};
 					F2DA3FAF1A6B009300F5576F = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					F2DA3FC41A6B009300F5576F = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = F2DA3FAF1A6B009300F5576F;
 					};
 				};
 			};
@@ -256,7 +194,6 @@
 			projectRoot = "";
 			targets = (
 				F2DA3FAF1A6B009300F5576F /* PullToRefreshDemo */,
-				F2DA3FC41A6B009300F5576F /* PullToRefreshDemoTests */,
 				89CB984F1B12C77700C87160 /* PullToRefresh */,
 			);
 		};
@@ -277,13 +214,6 @@
 				F2DA3FBB1A6B009300F5576F /* Main.storyboard in Resources */,
 				F2DA3FC01A6B009300F5576F /* LaunchScreen.xib in Resources */,
 				F2DA3FBD1A6B009300F5576F /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F2DA3FC31A6B009300F5576F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,23 +239,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F2DA3FC11A6B009300F5576F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F2DA3FCC1A6B009300F5576F /* PullToRefreshDemoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F2DA3FC71A6B009300F5576F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F2DA3FAF1A6B009300F5576F /* PullToRefreshDemo */;
-			targetProxy = F2DA3FC61A6B009300F5576F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F2DA3FB91A6B009300F5576F /* Main.storyboard */ = {
@@ -365,6 +279,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.dasdom.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = BreakOutToRefresh;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -388,6 +303,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.dasdom.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = BreakOutToRefresh;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -480,6 +396,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PullToRefreshDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.dasdom.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PullToRefreshDemo/PullToRefreshDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -493,42 +410,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PullToRefreshDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.dasdom.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PullToRefreshDemo/PullToRefreshDemo-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		F2DA3FD31A6B009300F5576F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PullToRefreshDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PullToRefreshDemo.app/PullToRefreshDemo";
-			};
-			name = Debug;
-		};
-		F2DA3FD41A6B009300F5576F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PullToRefreshDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PullToRefreshDemo.app/PullToRefreshDemo";
 			};
 			name = Release;
 		};
@@ -558,15 +442,6 @@
 			buildConfigurations = (
 				F2DA3FD01A6B009300F5576F /* Debug */,
 				F2DA3FD11A6B009300F5576F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F2DA3FD21A6B009300F5576F /* Build configuration list for PBXNativeTarget "PullToRefreshDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F2DA3FD31A6B009300F5576F /* Debug */,
-				F2DA3FD41A6B009300F5576F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
