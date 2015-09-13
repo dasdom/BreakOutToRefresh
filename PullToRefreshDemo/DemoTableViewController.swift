@@ -46,7 +46,7 @@ class DemoTableViewController: UITableViewController {
   
 }
 
-extension DemoTableViewController: UIScrollViewDelegate {
+extension DemoTableViewController {
  
   override func scrollViewDidScroll(scrollView: UIScrollView) {
     refreshView.scrollViewDidScroll(scrollView)
