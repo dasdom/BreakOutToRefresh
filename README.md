@@ -1,7 +1,7 @@
 # BreakOutToRefresh
 Play BreakOut while loading - A playable pull to refresh view using SpriteKit
 
-![](https://raw.githubusercontent.com/dasdom/BreakOutToRefresh/master/PullToRefreshDemo/what.gif)
+![](https://raw.githubusercontent.com/dasdom/BreakOutToRefresh/master/Example/PullToRefreshDemo/what.gif)
 
 BreakOutToRefresh uses SpriteKit to add a playable mini game to the pull to refresh view in a table view. In this case the mini game is BreakOut but a lot of other mini games could be presented in this space.
 
