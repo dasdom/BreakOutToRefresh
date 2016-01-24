@@ -1,0 +1,6 @@
+framework module BreakOutToRefresh {
+  umbrella header "BreakOutToRefresh-umbrella.h"
+
+  export *
+  module * { export * }
+}

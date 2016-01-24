@@ -1,0 +1,24 @@
+{
+  "name": "BreakOutToRefresh",
+  "version": "1.0.0",
+  "summary": "Play BreakOut while loading - A playable pull to refresh view using SpriteKit",
+  "description": "BreakOutToRefresh uses SpriteKit to add a playable mini game to the pull to refresh view in a table view. In this case the mini game is BreakOut but a lot of other mini games could be presented in this space.",
+  "homepage": "https://github.com/dasdom/BreakOutToRefresh",
+  "authors": {
+    "Dominik Hauser": "dominik.hauser@dasdom.de"
+  },
+  "source": {
+    "git": "https://github.com/dasdom/BreakOutToRefresh.git",
+    "tag": "1.0.0"
+  },
+  "social_media_url": "https://twitter.com/dasdom",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "BreakOutToRefresh/**/*",
+  "frameworks": [
+    "UIKit",
+    "SpriteKit"
+  ]
+}
