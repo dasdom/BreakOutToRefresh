@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '91E5119F5745DA88719AA39B'
+               BlueprintIdentifier = 'E6EA2D21B0E88034F1941684'
                BlueprintName = 'BreakOutToRefresh'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'BreakOutToRefresh.framework'>
