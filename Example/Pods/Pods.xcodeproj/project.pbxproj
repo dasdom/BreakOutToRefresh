@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AA69F17929E854C2529D27D36C5F70B /* BreakOutToRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA7BA69E778ECB4C92A9DD1590F72CCB /* BreakOutToRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		404F5D509A8433816443DA44EEBEDD16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D43C348AC5FACE34E933855B6F8A07 /* Foundation.framework */; };
+		45834A3ABE69480B8BB384A4D2E8C554 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E160EC9FBA49EED4D05E9A3B3AB99ED /* UIKit.framework */; };
+		6995EB064FA4203F480BBC02AA46BE62 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1398E4485B9A1D67F6BBAF6A86E32F /* SpriteKit.framework */; };
+		BB82C9491FABDB0600101DF68987C15B /* BreakOutToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4181207B5C0D8A402246716A3FA9DFD /* BreakOutToRefreshView.swift */; };
+		D0009F70E37ACCDD48D73A027E189FCF /* BreakOutToRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69BBCDB4CFBB568DB1D0E4FC646CC24E /* BreakOutToRefresh-dummy.m */; };
+		D28752E618FDBBB002A9CD4B1080CA3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D43C348AC5FACE34E933855B6F8A07 /* Foundation.framework */; };
+		F179EF66C22A01534F9B7E54010FF63F /* Pods-PullToRefreshDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA91CEFAF59442DA0FAF316D2D77438 /* Pods-PullToRefreshDemo-dummy.m */; };
+		F5FE4F4187B931849D7F4FE6A9307804 /* Pods-PullToRefreshDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B34036ECC792E0705288A5DFB964380B /* Pods-PullToRefreshDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04181D621A737A69037719D836B93808 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43B24E635073D0739017DFB7C0783010;
+			remoteInfo = BreakOutToRefresh;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		12E46A47D79473C146F1E7320BA223E4 /* Pods_PullToRefreshDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PullToRefreshDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BFD7A247DD00FFAC600BB4B48E04D47 /* BreakOutToRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BreakOutToRefresh-prefix.pch"; sourceTree = "<group>"; };
+		31D5ADB695A92FD953002AEF8B730A56 /* BreakOutToRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BreakOutToRefresh.modulemap; sourceTree = "<group>"; };
+		3362CCA5C2A324609907FDAB80831722 /* Pods-PullToRefreshDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PullToRefreshDemo-resources.sh"; sourceTree = "<group>"; };
+		3BCD16C360BA8958E861C66B121DC9D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47BE575CB71AFFFE5381512468AA56F9 /* Pods-PullToRefreshDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PullToRefreshDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		507E911A8DB72A368AEE5FB77A8247FA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5513E551ABB3864A6C1E20A0936E8728 /* Pods-PullToRefreshDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PullToRefreshDemo.modulemap"; sourceTree = "<group>"; };
+		5D8CBC4BC7DB2873FD840BA5B72B54FD /* Pods-PullToRefreshDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PullToRefreshDemo.release.xcconfig"; sourceTree = "<group>"; };
+		69BBCDB4CFBB568DB1D0E4FC646CC24E /* BreakOutToRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BreakOutToRefresh-dummy.m"; sourceTree = "<group>"; };
+		6E1398E4485B9A1D67F6BBAF6A86E32F /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
+		6E2A5FE426E75CC9648035392BC740DD /* Pods-PullToRefreshDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PullToRefreshDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		707F5BF13786CF8149846D5FD9AC7489 /* BreakOutToRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BreakOutToRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AA91CEFAF59442DA0FAF316D2D77438 /* Pods-PullToRefreshDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PullToRefreshDemo-dummy.m"; sourceTree = "<group>"; };
+		7E160EC9FBA49EED4D05E9A3B3AB99ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		A26F9CCDE6EBFA53A155A34F49ECA54F /* Pods-PullToRefreshDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PullToRefreshDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A797821CD0178A0D64E97F47497FF182 /* BreakOutToRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BreakOutToRefresh.xcconfig; sourceTree = "<group>"; };
+		B08559D2281AF2833AD03AFBAD4EBC1B /* Pods-PullToRefreshDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PullToRefreshDemo-frameworks.sh"; sourceTree = "<group>"; };
+		B1D43C348AC5FACE34E933855B6F8A07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B34036ECC792E0705288A5DFB964380B /* Pods-PullToRefreshDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PullToRefreshDemo-umbrella.h"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BA7BA69E778ECB4C92A9DD1590F72CCB /* BreakOutToRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BreakOutToRefresh-umbrella.h"; sourceTree = "<group>"; };
+		E4181207B5C0D8A402246716A3FA9DFD /* BreakOutToRefreshView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BreakOutToRefreshView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C19B1951FF187782EA8B11378EB7FA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D28752E618FDBBB002A9CD4B1080CA3B /* Foundation.framework in Frameworks */,
+				6995EB064FA4203F480BBC02AA46BE62 /* SpriteKit.framework in Frameworks */,
+				45834A3ABE69480B8BB384A4D2E8C554 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1CEF721548FC1E458B715FC95C5F0C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				404F5D509A8433816443DA44EEBEDD16 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91BBEF3DA3BDDCFC77FBE782D94FA859 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30F5952AF22B531D70AE36A0E14CB3EB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				31D5ADB695A92FD953002AEF8B730A56 /* BreakOutToRefresh.modulemap */,
+				A797821CD0178A0D64E97F47497FF182 /* BreakOutToRefresh.xcconfig */,
+				69BBCDB4CFBB568DB1D0E4FC646CC24E /* BreakOutToRefresh-dummy.m */,
+				2BFD7A247DD00FFAC600BB4B48E04D47 /* BreakOutToRefresh-prefix.pch */,
+				BA7BA69E778ECB4C92A9DD1590F72CCB /* BreakOutToRefresh-umbrella.h */,
+				3BCD16C360BA8958E861C66B121DC9D7 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/BreakOutToRefresh";
+			sourceTree = "<group>";
+		};
+		6EA30D522723C922937FE32E17499DE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				707F5BF13786CF8149846D5FD9AC7489 /* BreakOutToRefresh.framework */,
+				12E46A47D79473C146F1E7320BA223E4 /* Pods_PullToRefreshDemo.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				AB549BAAF8F6B77AB5AD8F660B42B21F /* Development Pods */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				6EA30D522723C922937FE32E17499DE3 /* Products */,
+				7F72320D7836A4D6483F523CEE5DF1F5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7F72320D7836A4D6483F523CEE5DF1F5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A272E5BDABE9672035DDACE919C85C7E /* Pods-PullToRefreshDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		91BBEF3DA3BDDCFC77FBE782D94FA859 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B1D43C348AC5FACE34E933855B6F8A07 /* Foundation.framework */,
+				6E1398E4485B9A1D67F6BBAF6A86E32F /* SpriteKit.framework */,
+				7E160EC9FBA49EED4D05E9A3B3AB99ED /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A272E5BDABE9672035DDACE919C85C7E /* Pods-PullToRefreshDemo */ = {
+			isa = PBXGroup;
+			children = (
+				507E911A8DB72A368AEE5FB77A8247FA /* Info.plist */,
+				5513E551ABB3864A6C1E20A0936E8728 /* Pods-PullToRefreshDemo.modulemap */,
+				A26F9CCDE6EBFA53A155A34F49ECA54F /* Pods-PullToRefreshDemo-acknowledgements.markdown */,
+				6E2A5FE426E75CC9648035392BC740DD /* Pods-PullToRefreshDemo-acknowledgements.plist */,
+				7AA91CEFAF59442DA0FAF316D2D77438 /* Pods-PullToRefreshDemo-dummy.m */,
+				B08559D2281AF2833AD03AFBAD4EBC1B /* Pods-PullToRefreshDemo-frameworks.sh */,
+				3362CCA5C2A324609907FDAB80831722 /* Pods-PullToRefreshDemo-resources.sh */,
+				B34036ECC792E0705288A5DFB964380B /* Pods-PullToRefreshDemo-umbrella.h */,
+				47BE575CB71AFFFE5381512468AA56F9 /* Pods-PullToRefreshDemo.debug.xcconfig */,
+				5D8CBC4BC7DB2873FD840BA5B72B54FD /* Pods-PullToRefreshDemo.release.xcconfig */,
+			);
+			name = "Pods-PullToRefreshDemo";
+			path = "Target Support Files/Pods-PullToRefreshDemo";
+			sourceTree = "<group>";
+		};
+		AB549BAAF8F6B77AB5AD8F660B42B21F /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB14871F4240A15109D3C93D1D004260 /* BreakOutToRefresh */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		E174CD315069582743799A5FC9EBC19D /* BreakOutToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				E4181207B5C0D8A402246716A3FA9DFD /* BreakOutToRefreshView.swift */,
+			);
+			path = BreakOutToRefresh;
+			sourceTree = "<group>";
+		};
+		FB14871F4240A15109D3C93D1D004260 /* BreakOutToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				E174CD315069582743799A5FC9EBC19D /* BreakOutToRefresh */,
+				30F5952AF22B531D70AE36A0E14CB3EB /* Support Files */,
+			);
+			name = BreakOutToRefresh;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EA598B1AD94E74F878EB89A8E49594C9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AA69F17929E854C2529D27D36C5F70B /* BreakOutToRefresh-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB99DFDB25104655AD031F964D1BDF9B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5FE4F4187B931849D7F4FE6A9307804 /* Pods-PullToRefreshDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		43B24E635073D0739017DFB7C0783010 /* BreakOutToRefresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 881616381FD836B36FD48ED47546FB9C /* Build configuration list for PBXNativeTarget "BreakOutToRefresh" */;
+			buildPhases = (
+				5E39A6BFF6D3A0E8925AB5699650254F /* Sources */,
+				1C19B1951FF187782EA8B11378EB7FA7 /* Frameworks */,
+				EA598B1AD94E74F878EB89A8E49594C9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BreakOutToRefresh;
+			productName = BreakOutToRefresh;
+			productReference = 707F5BF13786CF8149846D5FD9AC7489 /* BreakOutToRefresh.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		88C50736D939A0ED7D72F0066F898E75 /* Pods-PullToRefreshDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 448A59D61426378EE3EC3982040BFCB6 /* Build configuration list for PBXNativeTarget "Pods-PullToRefreshDemo" */;
+			buildPhases = (
+				6946F84592CFB4C2518E89D988623A28 /* Sources */,
+				E1CEF721548FC1E458B715FC95C5F0C9 /* Frameworks */,
+				EB99DFDB25104655AD031F964D1BDF9B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D4600218C1751C361F42E1ABE4011A4 /* PBXTargetDependency */,
+			);
+			name = "Pods-PullToRefreshDemo";
+			productName = "Pods-PullToRefreshDemo";
+			productReference = 12E46A47D79473C146F1E7320BA223E4 /* Pods_PullToRefreshDemo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 6EA30D522723C922937FE32E17499DE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43B24E635073D0739017DFB7C0783010 /* BreakOutToRefresh */,
+				88C50736D939A0ED7D72F0066F898E75 /* Pods-PullToRefreshDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E39A6BFF6D3A0E8925AB5699650254F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0009F70E37ACCDD48D73A027E189FCF /* BreakOutToRefresh-dummy.m in Sources */,
+				BB82C9491FABDB0600101DF68987C15B /* BreakOutToRefreshView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6946F84592CFB4C2518E89D988623A28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F179EF66C22A01534F9B7E54010FF63F /* Pods-PullToRefreshDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D4600218C1751C361F42E1ABE4011A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BreakOutToRefresh;
+			target = 43B24E635073D0739017DFB7C0783010 /* BreakOutToRefresh */;
+			targetProxy = 04181D621A737A69037719D836B93808 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0ECED873AC3F04CC534A1BD37D7BCE63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D8CBC4BC7DB2873FD840BA5B72B54FD /* Pods-PullToRefreshDemo.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PullToRefreshDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PullToRefreshDemo/Pods-PullToRefreshDemo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_PullToRefreshDemo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		273913ABB16729456EB53209C0FDAF7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47BE575CB71AFFFE5381512468AA56F9 /* Pods-PullToRefreshDemo.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-PullToRefreshDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PullToRefreshDemo/Pods-PullToRefreshDemo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_PullToRefreshDemo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		91A4E4BA5BC98876FADAC42E7912243C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A797821CD0178A0D64E97F47497FF182 /* BreakOutToRefresh.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BreakOutToRefresh/BreakOutToRefresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BreakOutToRefresh/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BreakOutToRefresh/BreakOutToRefresh.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BreakOutToRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9EB645C612834738B99727720210C23E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E39CD1E764776175CB82EEC82A6C9948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECB96239A42935A86CBF2C19FAB588A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A797821CD0178A0D64E97F47497FF182 /* BreakOutToRefresh.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BreakOutToRefresh/BreakOutToRefresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BreakOutToRefresh/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BreakOutToRefresh/BreakOutToRefresh.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BreakOutToRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EB645C612834738B99727720210C23E /* Debug */,
+				E39CD1E764776175CB82EEC82A6C9948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		448A59D61426378EE3EC3982040BFCB6 /* Build configuration list for PBXNativeTarget "Pods-PullToRefreshDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				273913ABB16729456EB53209C0FDAF7E /* Debug */,
+				0ECED873AC3F04CC534A1BD37D7BCE63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		881616381FD836B36FD48ED47546FB9C /* Build configuration list for PBXNativeTarget "BreakOutToRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91A4E4BA5BC98876FADAC42E7912243C /* Debug */,
+				ECB96239A42935A86CBF2C19FAB588A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,0 +1,14 @@
+PODS:
+  - BreakOutToRefresh (1.0.0)
+
+DEPENDENCIES:
+  - BreakOutToRefresh (from `../`)
+
+EXTERNAL SOURCES:
+  BreakOutToRefresh:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BreakOutToRefresh: 6585099c95f5277fe7fe17b612bf7c5cbe7b8c77
+
+COCOAPODS: 0.39.0

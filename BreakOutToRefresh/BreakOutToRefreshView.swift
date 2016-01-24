@@ -406,7 +406,7 @@ class BreakOutScene: SKScene, SKPhysicsContactDelegate {
       }
     }
   }
-  
+
   func isGameWon() -> Bool {
     var numberOfBricks = 0
     self.enumerateChildNodesWithName(blockName) { node, stop in
