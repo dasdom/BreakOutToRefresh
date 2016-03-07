@@ -84,6 +84,10 @@ Dominik Hauser
 
 [swiftandpainless.com](http://swiftandpainless.com)
 
+## Support
+
+If you want to give me something back, I would highly appreciate when you buy [my book about Test-Driven Development with Swift](https://www.packtpub.com/application-development/test-driven-ios-development-swift) and give me feedback about it. 
+
 ## Thanks
 
 Thanks to [Ben Oztalay](https://github.com/boztalay/BOZPongRefreshControl) and [raywenderlich.com](http://www.raywenderlich.com) for inspiration.
