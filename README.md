@@ -86,7 +86,7 @@ Dominik Hauser
 
 ## Support
 
-If you want to give me something back, I would highly appreciate when you buy [my book about Test-Driven Development with Swift](https://www.packtpub.com/application-development/test-driven-ios-development-swift) and give me feedback about it. 
+If you want to give me something back, I would highly appreciate if you buy [my book about Test-Driven Development with Swift](https://www.packtpub.com/application-development/test-driven-ios-development-swift) and give me feedback about it. 
 
 ## Thanks
 
