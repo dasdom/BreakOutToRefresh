@@ -11,7 +11,7 @@ Add **BreakOutToRefreshView.swift** to your project.
 
 ## Usage
 
-Add this to your table view controller:
+If you need it only once in your app, add this to your table view controller:
 ```swift
 var refreshView: BreakOutToRefreshView!
   
@@ -53,6 +53,25 @@ extension DemoTableViewController: BreakOutToRefreshDelegate {
     // load stuff from the internet
   }
 
+}
+```
+
+In case you need it more than once in your app, add the setup to `viewWillAppear` and clean up in `viewWillDisappear` like this:
+
+```swift
+override func viewWillAppear(_ animated: Bool) {
+  super.viewWillAppear(animated)
+  
+  refreshView = BreakOutToRefreshView(scrollView: tableView)
+  refreshView.refreshDelegate = self
+  tableView.addSubview(refreshView)
+}
+
+override func viewWillDisappear(_ animated: Bool) {
+  super.viewWillDisappear(animated)
+  
+  refreshView.removeFromSuperview()
+  refreshView = nil
 }
 ```
 
