@@ -18,10 +18,23 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	self.refreshView = [[BreakOutToRefreshView alloc] initWithScrollView:self.tableView];
-	self.refreshView.delegate = self;
 	
-	[self.tableView addSubview:self.refreshView];
+  [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"DemoCell"];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  
+  self.refreshView = [[BreakOutToRefreshView alloc] initWithScrollView:self.tableView];
+  self.refreshView.refreshDelegate = self;
+  [self.tableView addSubview:self.refreshView];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+  [super viewWillDisappear:animated];
+  
+  [self.refreshView removeFromSuperview];
+  self.refreshView = nil;
 }
 
 #pragma mark - Table view data source
