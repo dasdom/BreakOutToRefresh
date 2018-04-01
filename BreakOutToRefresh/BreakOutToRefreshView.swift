@@ -38,7 +38,7 @@ open class BreakOutToRefreshView: SKView {
 
   fileprivate let breakOutScene: BreakOutScene
   fileprivate unowned let scrollView: UIScrollView
-  open weak var refreshDelegate: BreakOutToRefreshDelegate?
+  @objc open weak var refreshDelegate: BreakOutToRefreshDelegate?
   open var forceEnd = false
 
   open var isRefreshing = false
@@ -88,7 +88,7 @@ open class BreakOutToRefreshView: SKView {
     fatalError("Use init(scrollView:) instead.")
   }
 
-  public init(scrollView inScrollView: UIScrollView) {
+  @objc public init(scrollView inScrollView: UIScrollView) {
 
     let frame = CGRect(x: 0.0, y: -sceneHeight, width: inScrollView.frame.size.width, height: sceneHeight)
 
@@ -131,20 +131,30 @@ open class BreakOutToRefreshView: SKView {
       self.breakOutScene.start()
     }
     UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
-      self.scrollView.contentInset.top += self.sceneHeight
+      if #available(iOS 11.0, *) {
+//        self.scrollView.contentInset.top += self.sceneHeight + self.scrollView.adjustedContentInset.top
+        self.scrollView.contentInset.top += self.sceneHeight + self.scrollView.safeAreaInsets.top
+      } else {
+        self.scrollView.contentInset.top += self.sceneHeight
+      }
       }) { (_) -> Void in
         self.isVisible = true
     }
   }
 
-  open func endRefreshing() {
+  @objc open func endRefreshing() {
     if (!isDragging || forceEnd) && isVisible {
       self.isVisible = false
       UIView.animate(withDuration: 0.4, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
-        self.scrollView.contentInset.top -= self.sceneHeight
+        if #available(iOS 11.0, *) {
+          self.scrollView.contentInset.top -= self.sceneHeight + self.scrollView.safeAreaInsets.top
+        } else {
+          self.scrollView.contentInset.top -= self.sceneHeight
+        }
         }) { (_) -> Void in
           self.isRefreshing = false
-          self.presentScene(StartScene(size: CGSize(width: self.scrollView.frame.size.width, height: self.sceneHeight)))
+//          self.presentScene(StartScene(size: CGSize(width: self.scrollView.frame.size.width, height: self.sceneHeight)))
+          self.presentScene(self.startScene, transition: .doorsCloseVertical(withDuration: 0.3))
       }
     } else {
       breakOutScene.updateLabel("Loading Finished")

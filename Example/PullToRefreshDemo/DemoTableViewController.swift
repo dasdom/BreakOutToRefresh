@@ -78,7 +78,7 @@ extension DemoTableViewController: BreakOutToRefreshDelegate {
 	
 	func refreshViewDidRefresh(_ refreshView: BreakOutToRefreshView) {
 		// this code is to simulage the loading from the internet
-		DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(NSEC_PER_SEC * 3)) / Double(NSEC_PER_SEC), execute: { () -> Void in
+		DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(NSEC_PER_SEC * 10)) / Double(NSEC_PER_SEC), execute: { () -> Void in
 			refreshView.endRefreshing()
 		})
 	}
