@@ -7,31 +7,47 @@ BreakOutToRefresh uses SpriteKit to add a playable mini game to the pull to refr
 
 ## Installation
 
+### CocoaPods
+
+Add this to your Podfile:
+
+```
+use_frameworks!
+
+pod 'BreakOutToRefresh'
+```
+
+### Manual
+
 Add **BreakOutToRefreshView.swift** to your project.
 
 ## Usage
 
 If you need it only once in your app, add this to your table view controller:
 ```swift
-var refreshView: BreakOutToRefreshView!
+class DemoTableViewController: UITableViewController {
+
+  var refreshView: BreakOutToRefreshView!
+  
+  // ...
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let refreshHeight = CGFloat(100)
     refreshView = BreakOutToRefreshView(scrollView: tableView)
-    refreshView.delegate = self
-    
-    // configure the colors of the refresh view
-    refreshView.scenebackgroundColor = UIColor(hue: 0.68, saturation: 0.9, brightness: 0.3, alpha: 1.0)
-    refreshView.paddleColor = UIColor.lightGrayColor()
-    refreshView.ballColor = UIColor.whiteColor()
-    refreshView.blockColors = [UIColor(hue: 0.17, saturation: 0.9, brightness: 1.0, alpha: 1.0), UIColor(hue: 0.17, saturation: 0.7, brightness: 1.0, alpha: 1.0), UIColor(hue: 0.17, saturation: 0.5, brightness: 1.0, alpha: 1.0)]
-    
-    tableView.addSubview(refreshView)
-    
-  }
+    refreshView.refreshDelegate = self
   
+    // configure the refresh view
+    refreshView.scenebackgroundColor = .white
+    refreshView.textColor = .black
+    refreshView.paddleColor = .brown
+    refreshView.ballColor = .darkGray
+    refreshView.blockColors = [.blue, .green, .red]
+  
+    tableView.addSubview(refreshView)
+  }  
+}
+
 extension DemoTableViewController: UIScrollViewDelegate {
  
   override func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -64,6 +80,14 @@ override func viewWillAppear(_ animated: Bool) {
   
   refreshView = BreakOutToRefreshView(scrollView: tableView)
   refreshView.refreshDelegate = self
+  
+  // configure the refresh view
+  refreshView.scenebackgroundColor = .white
+  refreshView.textColor = .black
+  refreshView.paddleColor = .brown
+  refreshView.ballColor = .darkGray
+  refreshView.blockColors = [.blue, .green, .red]
+  
   tableView.addSubview(refreshView)
 }
 
@@ -83,29 +107,21 @@ When `endRefreshing()` is called the mini game doesn't stop immediately. The gam
 
 It's kind of beta status.
 
-## To do
-
-- Add scoring
-- Add ending of the game when the ball hits the right wall
-- Add levels
-
 ## Feedback
 
-If you use this code or got inspired by the idea and build an app with a even more awesome PullToRefresh game, please let me know.
+If you use this code or got inspired by the idea and build an app with an even more awesome PullToRefresh game, please let me know.
 
 ## Author
 
 Dominik Hauser
 
-[App.net: @dasdom](https://alpha.app.net/dasdom)
-
 [Twitter: @dasdom](https://twitter.com/dasdom)
 
-[swiftandpainless.com](http://swiftandpainless.com)
+[dasdom.github.io](https://dasdom.github.io/)
 
 ## Support
 
-If you want to give me something back, I would highly appreciate if you buy [my book about Test-Driven Development with Swift](https://www.packtpub.com/application-development/test-driven-ios-development-swift) and give me feedback about it. 
+If you want to give me something back, I would highly appreciate if you buy [my upcoming book about Test-Driven Development with Swift](https://leanpub.com/tddfakebookforios) and give me feedback about it. 
 
 ## Thanks
 

@@ -15,24 +15,23 @@ class DemoTableViewController: UITableViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		//    let refreshHeight = CGFloat(100)
-		
-		// configure the refresh view
-		//    refreshView.scenebackgroundColor = UIColor(hue: 0.68, saturation: 0.9, brightness: 0.3, alpha: 1.0)
-		//    refreshView.textColor = UIColor.whiteColor()
-		//    refreshView.paddleColor = UIColor.lightGrayColor()
-		//    refreshView.ballColor = UIColor.whiteColor()
-		//    refreshView.blockColors = [UIColor(hue: 0.17, saturation: 0.9, brightness: 1.0, alpha: 1.0), UIColor(hue: 0.17, saturation: 0.7, brightness: 1.0, alpha: 1.0), UIColor(hue: 0.17, saturation: 0.5, brightness: 1.0, alpha: 1.0)]
-		
+    
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DemoCell")
-	}
+  }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
     refreshView = BreakOutToRefreshView(scrollView: tableView)
     refreshView.refreshDelegate = self
+
+    // configure the refresh view
+    refreshView.scenebackgroundColor = .white
+    refreshView.textColor = .black
+    refreshView.paddleColor = .brown
+    refreshView.ballColor = .darkGray
+    refreshView.blockColors = [.blue, .green, .red]
+
     tableView.addSubview(refreshView)
   }
   
