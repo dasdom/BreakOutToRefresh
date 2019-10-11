@@ -121,7 +121,7 @@ Dominik Hauser
 
 ## Support
 
-If you want to give me something back, I would highly appreciate if you buy [my upcoming book about Test-Driven Development with Swift](https://leanpub.com/tddfakebookforios) and give me feedback about it. 
+If you want to give me something back, I would highly appreciate if you buy [my book about Test-Driven Development with Swift](https://leanpub.com/tddfakebookforios) and give me feedback about it. 
 
 ## Thanks
 
