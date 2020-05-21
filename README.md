@@ -5,6 +5,10 @@ Play BreakOut while loading - A playable pull to refresh view using SpriteKit
 
 BreakOutToRefresh uses SpriteKit to add a playable mini game to the pull to refresh view in a table view. In this case the mini game is BreakOut but a lot of other mini games could be presented in this space.
 
+## Book
+
+If you like this repository and like'd to give me something back, I wrote a book about funny location based projects for iOS. Please check it out: [Build Location-Based Projects for iOS](https://pragprog.com/book/dhios/build-location-based-projects-for-ios)
+
 ## Installation
 
 ### CocoaPods
